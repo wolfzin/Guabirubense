@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guabirubense Buffet e Eventos · Salão de festas e almoço em Guabiruba (demonstração)</title>
+<meta name="description" content="Salão de festas no Centro de Guabiruba para casamentos, aniversários, comunhões, corporativos, bailes e shows. Almoço buffet por quilo de segunda a sexta.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Great+Vibes&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --preto:#0B0B0B; --preto2:#151412; --ouro:#B5954F; --ouro-claro:#DAC191; --ouro-escuro:#8D7750;
+  --creme:#F5EFE3; --vinho:#6B2E2A; --texto:#EDE6D6;
+  --serif:"Cinzel","Trajan Pro","Times New Roman",Georgia,serif;
+  --sans:"Lato","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --script:"Great Vibes","Brush Script MT",cursive;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--preto);color:var(--texto);font-family:var(--sans);font-size:1.0625rem;line-height:1.6;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--ouro-claro)}
+a:hover{color:#fff}
+:focus-visible{outline:3px solid var(--ouro-claro);outline-offset:3px}
+.skip{position:absolute;left:1rem;top:-4rem;background:var(--ouro);color:var(--preto);padding:.75rem 1rem;z-index:100;font-weight:700;text-decoration:none}
+.skip:focus{top:1rem}
+.demo{background:#000;color:var(--ouro-escuro);text-align:center;font-size:.8125rem;letter-spacing:.04em;padding:.4rem 1rem;border-bottom:1px solid #222}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+.leitura{max-width:65ch}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:.06em;line-height:1.2;margin:0 0 .6em}
+h2{font-size:clamp(1.6rem,4vw,2.4rem);color:var(--ouro)}
+.olho{font-family:var(--script);font-size:clamp(2rem,6vw,2.8rem);color:var(--ouro-claro);line-height:1;display:block;margin-bottom:.2rem;letter-spacing:0}
+.filete{display:flex;align-items:center;gap:.8rem;color:var(--ouro);justify-content:center;margin:0 auto 1.2rem;max-width:280px}
+.filete::before,.filete::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--ouro))}
+.filete::after{background:linear-gradient(90deg,var(--ouro),transparent)}
+.cab-sec{text-align:center;margin-bottom:2.5rem}
+.cab-sec p{margin:0 auto;max-width:60ch;color:#cfc6b4}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.8rem 1.5rem;font-family:var(--serif);font-weight:700;font-size:.95rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:1px solid var(--ouro);transition:background .2s,color .2s}
+.btn-ouro{background:var(--ouro);color:var(--preto)}
+.btn-ouro:hover{background:var(--ouro-claro);color:var(--preto)}
+.btn-linha{color:var(--ouro-claro);background:transparent}
+.btn-linha:hover{background:rgba(181,149,79,.15);color:#fff}
+
+/* topo */
+.topo{position:sticky;top:0;z-index:20;background:rgba(11,11,11,.94);border-bottom:1px solid #2a2620;backdrop-filter:blur(6px)}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:60px}
+.marca{font-family:var(--serif);color:var(--ouro);letter-spacing:.2em;text-decoration:none;font-size:1rem;display:inline-flex;align-items:center;min-height:44px}
+.topo nav{display:none}
+.topo nav a{color:#d8cfbd;text-decoration:none;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;padding:.75rem .6rem;display:inline-block}
+.topo nav a:hover{color:var(--ouro-claro)}
+.topo .btn{min-height:44px;padding:.5rem 1rem;font-size:.8rem}
+@media(min-width:900px){.topo nav{display:block}}
+
+/* hero convite */
+.hero{position:relative;min-height:calc(100svh - 92px);display:grid;place-items:center;padding:3rem 1.25rem;isolation:isolate;overflow:hidden}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;filter:saturate(.85)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at center,rgba(11,11,11,.5) 0%,rgba(11,11,11,.8) 75%)}
+.convite{position:relative;width:min(560px,100%);text-align:center;padding:2.5rem 1.5rem 2rem;border:1px solid var(--ouro-escuro);outline:1px solid var(--ouro-escuro);outline-offset:-10px;background:rgba(11,11,11,.62)}
+.convite::before,.convite::after{content:"❦";position:absolute;left:50%;transform:translateX(-50%);background:var(--preto);color:var(--ouro);padding:0 .6rem;font-size:1.2rem;line-height:1}
+.convite::before{top:-.6rem}.convite::after{bottom:-.6rem;transform:translateX(-50%) rotate(180deg)}
+.convite .logo{width:min(220px,62%);margin:0 auto .6rem;mix-blend-mode:lighten}
+.convite h1{font-size:clamp(1.55rem,5.4vw,2.35rem);color:#f3ead6;margin:.2rem 0 .8rem}
+.convite p{color:#d6ccb8;margin:0 auto 1.6rem;max-width:42ch}
+.convite .acoes{display:flex;flex-direction:column;gap:.75rem}
+@media(min-width:520px){.convite .acoes{flex-direction:row;justify-content:center}}
+.convite small{display:block;margin-top:1.4rem;color:var(--ouro-escuro);letter-spacing:.12em;text-transform:uppercase;font-size:.78rem}
+
+section{padding:4.5rem 0}
+/* eventos */
+.eventos{background:var(--preto2)}
+.grade-ev{display:grid;grid-template-columns:1fr;gap:1.25rem;list-style:none;padding:0;margin:0}
+@media(min-width:600px){.grade-ev{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.grade-ev{grid-template-columns:repeat(3,1fr)}}
+.ev{border-top:2px solid var(--ouro);background:linear-gradient(180deg,#1b1915,#121110);padding:1.6rem 1.4rem 1.5rem;position:relative}
+.ev::after{content:"";position:absolute;left:1.4rem;right:1.4rem;top:6px;height:1px;background:var(--ouro-escuro);opacity:.6}
+.ev svg{width:40px;height:40px;stroke:var(--ouro);fill:none;stroke-width:1.3;margin-bottom:.8rem}
+.ev h3{font-size:1.15rem;color:var(--ouro-claro);margin-bottom:.4rem}
+.ev p{margin:0;color:#cbc2b0;font-size:1rem}
+
+/* salão */
+.galeria{display:grid;gap:.75rem;grid-template-columns:1fr}
+.galeria figure{margin:0;position:relative;overflow:hidden;border:1px solid #2b2620}
+.galeria img{width:100%;height:100%;object-fit:cover}
+.galeria figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.8rem .9rem .7rem;background:linear-gradient(transparent,rgba(0,0,0,.85));font-family:var(--serif);letter-spacing:.08em;font-size:.9rem;color:var(--ouro-claro)}
+.galeria .g1 img{aspect-ratio:1/1}
+.galeria .g2 img,.galeria .g3 img{aspect-ratio:4/3}
+.sede{border:1px dashed var(--ouro-escuro);padding:1.6rem;display:flex;flex-direction:column;justify-content:center;background:#121110}
+.sede h3{color:var(--ouro);font-size:1.15rem}
+.sede p{margin:0 0 1rem;color:#cbc2b0}
+@media(min-width:800px){
+  .galeria{grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:auto auto}
+  .galeria .g1{grid-row:1/3}
+  .galeria .g1 img{aspect-ratio:auto;min-height:100%}
+  .galeria .g2 img,.galeria .g3 img{aspect-ratio:1/1}
+  .sede{grid-column:2/4}
+}
+
+/* bailes */
+.bailes{background:#09080a;border-top:1px solid #241f2a;border-bottom:1px solid #241f2a}
+.bailes-grid{display:grid;gap:2rem;align-items:center}
+.palco{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.palco img{width:100%;aspect-ratio:16/10;object-fit:cover;border:1px solid #2b2533}
+.ingresso{position:relative;background:var(--creme);color:#2a2219;padding:1.8rem 1.6rem;border-radius:4px;box-shadow:0 0 0 1px var(--ouro),0 0 0 6px var(--creme),0 0 0 7px var(--ouro-escuro)}
+.ingresso .tag{font-family:var(--serif);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--vinho);display:block;margin-bottom:.6rem}
+.ingresso .data{display:flex;align-items:baseline;gap:.6rem;font-family:var(--serif);color:var(--vinho);border-bottom:1px dashed #b7a27a;padding-bottom:.8rem;margin-bottom:.8rem}
+.ingresso .data b{font-size:3rem;line-height:1}
+.ingresso h3{font-size:1.3rem;color:#2a2219;letter-spacing:.03em}
+.ingresso p{margin:.4rem 0}
+.ingresso ul{padding-left:1.1rem;margin:.4rem 0 0}
+.ingresso li a{color:var(--vinho);display:inline-flex;align-items:center;min-height:44px;font-weight:700}
+.ingresso .obs{font-size:.88rem;color:#5d5140;margin-top:.8rem}
+@media(min-width:880px){.bailes-grid{grid-template-columns:1.2fr 1fr}}
+
+.confia{padding:2.5rem 0;text-align:center;background:var(--preto2)}
+.confia p{margin:0 auto;max-width:60ch;font-family:var(--serif);letter-spacing:.04em;color:#d8cfbd;font-size:1.05rem}
+
+/* orçamento */
+.orc{background:radial-gradient(ellipse at top,#1e1a12,var(--preto) 70%)}
+.form{max-width:640px;margin:0 auto;display:grid;gap:1.1rem;border:1px solid var(--ouro-escuro);padding:2rem 1.4rem;background:rgba(0,0,0,.4)}
+@media(min-width:620px){.form{grid-template-columns:1fr 1fr;padding:2.4rem}.form .full{grid-column:1/3}}
+.form label{display:block;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ouro-claro);margin-bottom:.35rem}
+.form input,.form select,.form textarea{width:100%;min-height:48px;padding:.7rem .8rem;font:inherit;color:#f3ead6;background:#141210;border:1px solid #4a4031;border-radius:2px}
+.form textarea{min-height:96px;resize:vertical}
+.form input:focus,.form select:focus,.form textarea:focus{border-color:var(--ouro-claro)}
+.form .nota{font-size:.92rem;color:#b9af9b;margin:0}
+.form button{cursor:pointer;width:100%}
+
+/* almoço (seção clara) */
+.almoco{background:var(--creme);color:#2a2219}
+.almoco h2{color:var(--vinho)}
+.almoco .olho{color:var(--ouro-escuro)}
+.almoco-grid{display:grid;gap:2.2rem;align-items:center}
+.almoco ul{list-style:none;padding:0;margin:1.2rem 0}
+.almoco li{padding:.55rem 0 .55rem 1.8rem;border-bottom:1px solid #e1d6c0;position:relative}
+.almoco li::before{content:"◆";position:absolute;left:0;color:var(--ouro);font-size:.8rem;top:.8rem}
+.horario-almoco{display:inline-block;border:1px solid var(--ouro-escuro);padding:.8rem 1.1rem;font-family:var(--serif);letter-spacing:.05em;color:var(--vinho);margin-bottom:1.2rem}
+.pratos{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.pratos img{width:100%;height:100%;object-fit:cover;border:4px solid #fff;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+.pratos .p1{grid-column:1/3;aspect-ratio:16/9}
+.pratos .p2,.pratos .p3{aspect-ratio:1/1}
+.almoco .btn-linha{color:var(--vinho);border-color:var(--vinho)}
+.almoco .btn-linha:hover{background:var(--vinho);color:var(--creme)}
+@media(min-width:880px){.almoco-grid{grid-template-columns:1fr 1.1fr}}
+
+/* avaliações */
+.nota-google{text-align:center;margin-bottom:2.5rem}
+.nota-google .num{font-family:var(--serif);font-size:4rem;color:var(--ouro);line-height:1}
+.nota-google .est{color:var(--ouro-claro);letter-spacing:.2em;font-size:1.3rem}
+.nota-google p{margin:.3rem 0 0;color:#cfc6b4}
+.depo{display:grid;gap:1.5rem;list-style:none;padding:0;margin:0}
+@media(min-width:860px){.depo{grid-template-columns:repeat(3,1fr)}}
+.depo blockquote{margin:0;height:100%;padding:2.4rem 1.4rem 1.4rem;border:1px solid #2d281f;position:relative;background:#100f0d}
+.depo blockquote::before{content:"“";position:absolute;top:-.2rem;left:1rem;font-family:var(--script);font-size:4.5rem;color:var(--ouro);line-height:1}
+.depo p{margin:0 0 1rem;color:#e6dece}
+.depo cite{font-style:normal;color:var(--ouro-claro);font-size:.92rem;letter-spacing:.05em}
+
+/* rodapé */
+footer{border-top:1px solid var(--ouro-escuro);padding:3.5rem 0 2rem;background:#000}
+.rod-grid{display:grid;gap:2rem}
+@media(min-width:800px){.rod-grid{grid-template-columns:1.2fr 1fr 1fr}}
+footer h2{font-size:1.1rem;letter-spacing:.14em}
+footer p{margin:0 0 .6rem;color:#cfc6b4}
+footer ul{list-style:none;padding:0;margin:0}
+footer li a{display:inline-flex;align-items:center;min-height:44px}
+.wolf{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #222;font-size:.88rem;color:#8e8676;text-align:center}
+.wolf p{color:#8e8676;max-width:70ch;margin:0 auto .4rem}
+/* ===== Movimento (WolfStudio v3) — só roda com JS e sem "reduzir movimento" ===== */
+:root{--e:cubic-bezier(.2,.7,.2,1)}
+.anim :is(.cab-sec,.ev,.galeria figure,.sede,.bailes-grid>div,.ingresso,.confia .filete,.confia p,.form,.almoco-grid>div,.nota-google,.depo li){transition:opacity .7s var(--e) var(--d,0ms),translate .8s var(--e) var(--d,0ms),scale .8s var(--e) var(--d,0ms),rotate .8s var(--e) var(--d,0ms),transform .35s var(--e),box-shadow .35s,border-color .25s,background-color .25s}
+.anim :is(.cab-sec,.ev,.galeria figure,.sede,.bailes-grid>div,.ingresso,.confia .filete,.confia p,.form,.almoco-grid>div,.nota-google,.depo li):not(.in){opacity:0;translate:var(--tx,0px) var(--ty,22px);scale:var(--sc,1)}
+@keyframes sobe{from{opacity:0;translate:0 18px}}
+@keyframes gira{to{rotate:360deg}}
+@media print{.anim *{opacity:1!important;translate:none!important;scale:none!important;clip-path:none!important}}
+[id]{scroll-margin-top:76px}
+/* topo e botões */
+.topo{transition:box-shadow .3s,border-color .3s}
+.rolou .topo{box-shadow:0 14px 30px -14px #000;border-bottom-color:var(--ouro-escuro)}
+.topo nav a{position:relative}
+.topo nav a::after{content:"";position:absolute;left:.6rem;right:.6rem;bottom:.45rem;height:1px;background:var(--ouro);scale:0 1;transition:scale .4s var(--e)}
+.topo nav a:hover::after,.topo nav a.on::after{scale:1 1}
+.topo nav a.on{color:var(--ouro-claro)}
+.btn{transition:background .2s,color .2s,transform .25s var(--e),box-shadow .25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px -12px rgba(181,149,79,.8)}
+.btn:active{transform:translateY(0)}
+.btn-ouro{position:relative;overflow:hidden}
+.btn-ouro::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);transition:left .7s var(--e)}
+.btn-ouro:hover::after{left:120%}
+/* hero: o convite se abre */
+.hero>img{scale:1.06;translate:0 var(--py,0px);animation:kb 2.6s var(--e) both}
+@keyframes kb{from{scale:1.18}}
+.convite{animation:convite 1.1s var(--e) .1s both}
+@keyframes convite{from{opacity:0;scale:.96}}
+.convite>*{animation:sobe .9s var(--e) .35s both}
+.convite>:nth-child(2){animation-delay:.47s}.convite>:nth-child(3){animation-delay:.59s}.convite>:nth-child(4){animation-delay:.71s}.convite>:nth-child(5){animation-delay:.83s}.convite>:nth-child(6){animation-delay:.95s}
+/* filetes dourados crescem do centro */
+.filete::before,.filete::after{transition:scale 1s var(--e) .25s}
+.filete::before{transform-origin:100% 50%}
+.filete::after{transform-origin:0 50%}
+.anim .cab-sec:not(.in) .filete::before,.anim .cab-sec:not(.in) .filete::after,.anim .confia .filete:not(.in)::before,.anim .confia .filete:not(.in)::after{scale:0 1}
+/* eventos: ícones se desenham */
+.ev:hover{transform:translateY(-5px);box-shadow:0 18px 30px -20px rgba(181,149,79,.55)}
+.ev::after{transition:left .4s var(--e),right .4s var(--e),opacity .3s}
+.ev:hover::after{left:.6rem;right:.6rem;opacity:1}
+.ev svg{transition:transform .4s var(--e)}
+.ev:hover svg{transform:translateY(-2px) scale(1.06)}
+.anim .ev svg *{stroke-dasharray:130;transition:stroke-dashoffset 1.4s ease calc(var(--d,0ms) + .2s)}
+.anim .ev:not(.in) svg *{stroke-dashoffset:130}
+/* salão, bailes, almoço */
+.galeria img{transition:scale 1.2s var(--e)}
+.galeria figure:hover img{scale:1.05}
+.anim .galeria figure{--sc:.97}
+.anim .ingresso{--ty:30px}
+.anim .ingresso:not(.in){rotate:2deg}
+.pratos img{transition:transform .4s var(--e),box-shadow .4s}
+.pratos img:hover{transform:translateY(-4px) rotate(-.5deg);box-shadow:0 12px 22px rgba(0,0,0,.2)}
+/* formulário e avaliações */
+.form input,.form select,.form textarea{transition:border-color .25s,box-shadow .25s}
+.form input:focus,.form select:focus,.form textarea:focus{box-shadow:0 0 0 3px rgba(218,193,145,.18)}
+.depo blockquote{transition:border-color .3s,transform .35s var(--e)}
+.depo blockquote:hover{border-color:var(--ouro-escuro);transform:translateY(-4px)}
+.nota-google .num{font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+<script>(function(d){if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion:reduce)').matches)d.classList.add('anim')})(document.documentElement)</script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<div class="demo" role="note">Demonstração WolfStudio — não é o site oficial.</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio">GUABIRUBENSE</a>
+    <nav aria-label="Seções">
+      <a href="#eventos">Eventos</a><a href="#salao">Salão</a><a href="#bailes">Bailes</a><a href="#almoco">Almoço</a><a href="#contato">Contato</a>
+    </nav>
+    <a class="btn btn-ouro" href="#orcamento">Orçamento</a>
+  </div>
+</header>
+
+<main id="conteudo">
+  <section class="hero" id="inicio" aria-labelledby="titulo">
+    <img src="assets/mesa-posta-evento-luz-lilas.jpg" width="918" height="918" alt="Mesa redonda montada para evento no salão, com toalha estampada, arranjo de flores, taças e cadeiras brancas sob luz lilás" fetchpriority="high">
+    <div class="convite">
+      <img class="logo" src="assets/logo-guabirubense-preto-dourado.jpg" width="867" height="867" alt="Logo Guabirubense Buffet e Eventos: monograma G dourado sobre fundo preto">
+      <span class="olho">Celebre</span>
+      <h1 id="titulo">Seu evento no Centro de Guabiruba</h1>
+      <p>Salão de festas para casamentos, aniversários, comunhões, eventos de empresa, bailes e shows. De segunda a sexta, almoço buffet.</p>
+      <div class="acoes">
+        <a class="btn btn-ouro" href="https://wa.me/5547996539504?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20um%20evento%20no%20Guabirubense." target="_blank" rel="noopener">Pedir orçamento</a>
+        <a class="btn btn-linha" href="#almoco">Almoço de seg a sex</a>
+      </div>
+      <small>Rua José Fischer, 370 · Centro · Guabiruba/SC</small>
+    </div>
+  </section>
+
+  <section class="eventos" id="eventos" aria-labelledby="t-eventos">
+    <div class="wrap">
+      <div class="cab-sec">
+        <span class="olho">Para cada ocasião</span>
+        <h2 id="t-eventos">Eventos que recebemos</h2>
+        <div class="filete" aria-hidden="true">✦</div>
+        <p>Nos fins de semana a casa vira salão de festa: no salão principal ou na sede aquática.</p>
+      </div>
+      <ul class="grade-ev">
+        <li class="ev"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="15" cy="24" r="9"/><circle cx="25" cy="24" r="9"/><path d="M17 9l3-4 3 4-3 3z"/></svg><h3>Casamentos</h3><p>Recepção no salão principal, com lustres, mesas redondas e cadeiras tiffany brancas.</p></li>
+        <li class="ev"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="8" y="20" width="24" height="13" rx="1"/><path d="M8 26h24M14 20v-5M20 20v-5M26 20v-5M14 11v-1M20 11v-1M26 11v-1"/></svg><h3>Aniversários</h3><p>Festa de aniversário para a família e os amigos, no salão ou na sede aquática.</p></li>
+        <li class="ev"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M13 7h14l-2 12a5 5 0 01-10 0z"/><path d="M20 24v8M14 33h12"/><circle cx="20" cy="13" r="2"/></svg><h3>Comunhões</h3><p>O almoço ou a festa da primeira comunhão, com a família toda reunida.</p></li>
+        <li class="ev"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="7" y="13" width="26" height="18" rx="1"/><path d="M15 13V9h10v4M7 21h26"/></svg><h3>Corporativos</h3><p>Confraternizações, recepções e cafés para empresas e instituições.</p></li>
+        <li class="ev"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 32L16 12l12 12z"/><path d="M24 8l1 3M31 12l-3 1M30 6l-2 2M12 6v2M34 22h-2"/></svg><h3>Festas</h3><p>Festas de fim de semana, inclusive temáticas, como a festa junina.</p></li>
+        <li class="ev"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="15" y="5" width="10" height="17" rx="5"/><path d="M10 18a10 10 0 0020 0M20 28v6M14 34h12"/></svg><h3>Bailes e shows</h3><p>Palco com som e luz para bandas, bailes e jantares dançantes.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="salao" aria-labelledby="t-salao">
+    <div class="wrap">
+      <div class="cab-sec">
+        <span class="olho">De dia e à noite</span>
+        <h2 id="t-salao">O salão principal</h2>
+        <div class="filete" aria-hidden="true">✦</div>
+      </div>
+      <div class="galeria">
+        <figure class="g1"><img src="assets/salao-principal-mesas-dia.jpg" width="1440" height="1439" loading="lazy" alt="Salão principal de dia: lustres de cristal, janelas com cortinas brancas, mesas redondas com toalha vinho e cadeiras brancas sobre piso de madeira"><figcaption>Salão principal, de dia</figcaption></figure>
+        <figure class="g2"><img src="assets/mesa-posta-evento-luz-lilas.jpg" width="918" height="918" loading="lazy" alt="Mesa posta para festa com flores, taças e luz lilás"><figcaption>Montado para festa</figcaption></figure>
+        <figure class="g3"><img src="assets/gmaps-decoracao-festa-junina.jpg" width="900" height="1200" loading="lazy" alt="Decoração de festa junina com bonecos caipiras e painel colorido"><figcaption>Festa junina</figcaption></figure>
+        <div class="sede">
+          <h3>E a sede aquática</h3>
+          <p>Além do salão principal, a casa tem a sede aquática para festas de fim de semana. Peça fotos e detalhes do espaço pelo WhatsApp.</p>
+          <a class="btn btn-linha" href="https://wa.me/5547996539504?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20sede%20aqu%C3%A1tica%20do%20Guabirubense." target="_blank" rel="noopener">Perguntar sobre a sede</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bailes" id="bailes" aria-labelledby="t-bailes">
+    <div class="wrap bailes-grid">
+      <div>
+        <span class="olho">Noites de baile</span>
+        <h2 id="t-bailes">Palco, banda e pista</h2>
+        <p class="leitura">O salão também recebe bailes, shows e jantares dançantes, com palco montado para banda.</p>
+        <div class="palco">
+          <img src="assets/gmaps-show-banda-palco.jpg" width="1600" height="900" loading="lazy" alt="Banda tocando no palco do salão com luz roxa e público em frente">
+          <img src="assets/gmaps-palco-bateria.jpg" width="1600" height="900" loading="lazy" alt="Palco montado com bateria e estrutura de som e luz">
+        </div>
+      </div>
+      <!-- CARD TEMPORÁRIO: trocar/remover depois de 31/10/2026. Fonte: post do Facebook de 20/09/2026. -->
+      <article class="ingresso" aria-labelledby="t-prox">
+        <span class="tag">Próximo evento no salão</span>
+        <div class="data"><b>31</b><span>outubro · 2026</span></div>
+        <h3 id="t-prox">4º Jantar Dançante com Valmir &amp; Volnei</h3>
+        <p><strong>Jantar + Baile: R$ 65,00</strong> · crianças de 7 a 12 anos pagam meia.</p>
+        <p>Os organizadores avisam: últimas mesas. Reservas direto com eles:</p>
+        <ul>
+          <li><a href="tel:+5547991548904">(47) 99154-8904 · Volnei</a></li>
+          <li><a href="tel:+5547991568183">(47) 99156-8183 · Valmir</a></li>
+          <li><a href="tel:+5547999989008">(47) 99998-9008 · Jackson</a></li>
+        </ul>
+        <p class="obs">Evento organizado por Valmir &amp; Volnei e realizado no salão do Guabirubense.</p>
+      </article>
+    </div>
+  </section>
+
+  <div class="confia" role="note">
+    <div class="wrap">
+      <div class="filete" aria-hidden="true">✦</div>
+      <!-- Fato do PNCP (27/01/2026). Confirmar com a dona antes de publicar. -->
+      <p>Já recebemos eventos institucionais, como a recepção dos professores da rede municipal de Guabiruba no início de 2026.</p>
+    </div>
+  </div>
+
+  <section class="orc" id="orcamento" aria-labelledby="t-orc">
+    <div class="wrap">
+      <div class="cab-sec">
+        <span class="olho">Vamos conversar</span>
+        <h2 id="t-orc">Peça seu orçamento</h2>
+        <div class="filete" aria-hidden="true">✦</div>
+        <p>Preencha o que já sabe. O botão monta a mensagem e abre o WhatsApp de orçamentos, (47) 99653-9504.</p>
+      </div>
+      <form class="form" id="form-orc" novalidate>
+        <div><label for="f-nome">Seu nome</label><input id="f-nome" name="nome" autocomplete="name" required></div>
+        <div><label for="f-tipo">Tipo de evento</label>
+          <select id="f-tipo" name="tipo">
+            <option>Casamento</option><option>Aniversário</option><option>Comunhão</option><option>Corporativo</option><option>Festa</option><option>Baile ou show</option><option>Outro</option>
+          </select></div>
+        <div><label for="f-data">Data pretendida</label><input id="f-data" name="data" type="date"></div>
+        <div><label for="f-conv">Convidados (aprox.)</label><input id="f-conv" name="convidados" type="number" min="1" inputmode="numeric" placeholder="ex.: 80"></div>
+        <div class="full"><label for="f-msg">Algo mais? (opcional)</label><textarea id="f-msg" name="msg" placeholder="Salão principal ou sede aquática, horário, cardápio…"></textarea></div>
+        <div class="full"><button class="btn btn-ouro" type="submit">Enviar pelo WhatsApp</button></div>
+        <p class="nota full">Prefere ligar? Fixo <a href="tel:+554733540177">(47) 3354-0177</a>.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="almoco" id="almoco" aria-labelledby="t-almoco">
+    <div class="wrap almoco-grid">
+      <div>
+        <span class="olho">Dia a dia</span>
+        <h2 id="t-almoco">Almoço de segunda a sexta</h2>
+        <p class="leitura">Na hora do almoço, o salão vira restaurante: buffet por quilo, em ambiente climatizado.</p>
+        <div class="horario-almoco">Seg a sex · almoço a partir das 11h</div>
+        <!-- Horário final a confirmar com a dona: 13h30 (Google) ou 14h (Instagram). -->
+        <ul>
+          <li>Variedade de carnes, saladas e acompanhamentos</li>
+          <li>Sobremesa</li>
+          <li>Batata frita elogiada pelos clientes</li>
+          <li>Estacionamento</li>
+        </ul>
+        <a class="btn btn-linha" href="https://www.google.com/maps?cid=979640156351360017" target="_blank" rel="noopener">Como chegar</a>
+      </div>
+      <div class="pratos">
+        <img class="p1" src="assets/buffet-saladas-capa-portal.jpg" width="800" height="530" loading="lazy" alt="Balcão de saladas do buffet com maionese, beterraba e folhas">
+        <img class="p2" src="assets/gmaps-prato-buffet.jpg" width="900" height="1200" loading="lazy" alt="Prato do buffet com carne, salada e acompanhamentos">
+        <img class="p3" src="assets/buffet-massas-gratinados.jpg" width="1083" height="718" loading="lazy" alt="Panela de massa gratinada e travessa de gratinado no buffet">
+      </div>
+    </div>
+  </section>
+
+  <section id="avaliacoes" aria-labelledby="t-aval">
+    <div class="wrap">
+      <div class="nota-google">
+        <h2 id="t-aval">O que dizem no Google</h2>
+        <div class="num">4,7</div>
+        <div class="est" aria-hidden="true">★★★★★</div>
+        <p>123 avaliações no Google</p>
+      </div>
+      <ul class="depo">
+        <li><blockquote><p>Excelente buffet por Kg. Comida bem variada, bem feita e com bom preço.</p><cite>Rui Souza · jan/2026</cite></blockquote></li>
+        <li><blockquote><p>Comida muito saborosa muitas variedades de carnes saladas, realmente vale a pena almoçar lá.</p><cite>Rodrigo Souza · mai/2026</cite></blockquote></li>
+        <li><blockquote><p>Comida saborosa! Variedade!! Bom atendimento! Lugar bem limpo e ventilado. Sobremesa incluída. Bastante lugar disponível no estacionamento.</p><cite>Avaliação 4★ no Google · ago/2024</cite></blockquote></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer id="contato">
+  <div class="wrap">
+    <div class="rod-grid">
+      <div>
+        <h2>Guabirubense Buffet e Eventos</h2>
+        <p>Rua José Fischer, 370, Centro<br>Guabiruba/SC · 88360-000</p>
+        <ul><li><a href="https://www.google.com/maps?cid=979640156351360017" target="_blank" rel="noopener">Abrir no Google Maps</a></li></ul>
+      </div>
+      <div>
+        <h2>Contato</h2>
+        <ul>
+          <li><a href="https://wa.me/5547996539504?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Guabirubense." target="_blank" rel="noopener">WhatsApp (47) 99653-9504</a></li>
+          <li><a href="tel:+554733540177">Fixo (47) 3354-0177</a></li>
+          <li><a href="mailto:restauranteguabirubense@gmail.com">restauranteguabirubense@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Redes</h2>
+        <ul>
+          <li><a href="https://www.instagram.com/guabirubense/" target="_blank" rel="noopener">Instagram @guabirubense</a></li>
+          <li><a href="https://www.facebook.com/RestauranteGuabirubense" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wolf">
+      <p>Demonstração feita por <strong>WolfStudio</strong> (Lucas Wolf, Guabiruba/SC). Não é o site oficial do Guabirubense. Fotos: portal de turismo de Guabiruba e Google Maps, só para esta demonstração.</p>
+      <p>Outros trabalhos da WolfStudio: catálogo digital da JE7 (empresa de fora de Guabiruba) e o site Etiquetas Guabiruba, feito para a família do Lucas.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('form-orc').addEventListener('submit',function(e){
+  e.preventDefault();
+  var f=e.target, linhas=['Olá! Quero um orçamento de evento no Guabirubense.'];
+  if(f.nome.value.trim()) linhas.push('Nome: '+f.nome.value.trim());
+  linhas.push('Tipo: '+f.tipo.value);
+  if(f.data.value){var d=f.data.value.split('-');linhas.push('Data: '+d[2]+'/'+d[1]+'/'+d[0]);}
+  if(f.convidados.value) linhas.push('Convidados (aprox.): '+f.convidados.value);
+  if(f.msg.value.trim()) linhas.push(f.msg.value.trim());
+  window.open('https://wa.me/5547996539504?text='+encodeURIComponent(linhas.join('\n')),'_blank','noopener');
+});
+</script>
+<script>
+/* Movimento (WolfStudio v3): revelar ao rolar, contadores e menu ativo. */
+(function(){
+  var R=document.documentElement; if(!R.classList.contains('anim')) return;
+  try{
+    var SEL='.cab-sec,.ev,.galeria figure,.sede,.bailes-grid>div,.ingresso,.confia .filete,.confia p,.form,.almoco-grid>div,.nota-google,.depo li', CNT='.nota-google .num';
+    var io=new IntersectionObserver(function(es){
+      var n=0;
+      es.forEach(function(e){
+        if(!e.isIntersecting) return;
+        var el=e.target; io.unobserve(el);
+        if(n) el.style.setProperty('--d',Math.min(n,7)*90+'ms');
+        n++; el.classList.add('in');
+        setTimeout(function(){el.style.removeProperty('--d')},1700);
+      });
+    },{threshold:.08,rootMargin:'0px 0px -5% 0px'});
+    var pend=[].slice.call(document.querySelectorAll(SEL));
+    pend.forEach(function(el){io.observe(el)});
+    /* rolagem rápida pode pular um bloco: o que já ficou para cima aparece sem esperar */
+    var tv=0;
+    function varre(){pend=pend.filter(function(el){
+      if(el.classList.contains('in')) return false;
+      if(el.getBoundingClientRect().bottom<0){io.unobserve(el);el.classList.add('in');return false}
+      return true;
+    })}
+
+    function conta(el){
+      var tn=null;
+      [].some.call(el.childNodes,function(c){if(c.nodeType===3&&/\d,\d/.test(c.nodeValue)){tn=c;return true}});
+      if(!tn) return;
+      var full=tn.nodeValue, m=full.match(/(\d+),(\d)/), alvo=parseFloat(m[1]+'.'+m[2]), t0=null;
+      function f(t){
+        if(!t0) t0=t;
+        var p=Math.min(1,(t-t0)/1100), v=alvo*(1-Math.pow(1-p,3));
+        tn.nodeValue=p<1?full.replace(m[0],v.toFixed(1).replace('.',',')):full;
+        if(p<1) requestAnimationFrame(f);
+      }
+      requestAnimationFrame(f);
+    }
+    var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){cio.unobserve(e.target);conta(e.target)}})},{threshold:.6});
+    [].forEach.call(document.querySelectorAll(CNT),function(el){cio.observe(el)});
+
+    var links=[].slice.call(document.querySelectorAll('nav a[href^="#"]')), mapa={};
+    var sio=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(!e.isIntersecting) return;
+      links.forEach(function(a){a.classList.remove('on')}); mapa[e.target.id].classList.add('on');
+    })},{rootMargin:'-40% 0px -55% 0px'});
+    links.forEach(function(a){var s=document.getElementById(a.getAttribute('href').slice(1)); if(s&&s.id!=='conteudo'){mapa[s.id]=a;sio.observe(s)}});
+
+    var hero=document.querySelector('.hero>img');
+    var espera=false;
+    function rolar(){
+      espera=false; var y=window.scrollY||0;
+      R.classList.toggle('rolou',y>8);
+      clearTimeout(tv); if(pend.length) tv=setTimeout(varre,180);
+      if(y<160) links.forEach(function(a){a.classList.remove('on')});
+      if(hero&&y<innerHeight) hero.style.setProperty('--py',Math.min(y*.05,hero.offsetHeight*.026).toFixed(1)+'px');
+    }
+    window.addEventListener('scroll',function(){if(!espera){espera=true;requestAnimationFrame(rolar)}},{passive:true});
+    window.addEventListener('resize',rolar);
+    rolar();
+
+  }catch(err){R.classList.remove('anim')}
+})();
+</script>
+</body>
+</html>
